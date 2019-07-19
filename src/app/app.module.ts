@@ -10,6 +10,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 
+const routes = [
+  { path: 'register', component: RegistrationComponent}
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +24,7 @@ import { RegistrationComponent } from './components/registration/registration.co
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    RouterModule,
+    RouterModule.forRoot(routes),
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
